@@ -11,8 +11,6 @@ def index(request):
 load_dotenv()
 api_key = os.getenv('key')
 
-#question : str = 'How are you doing today?'
-
 client = Groq(api_key=api_key)
 def generate_chatbot_response(message):
   completion = client.chat.completions.create(
