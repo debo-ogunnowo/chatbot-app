@@ -15,6 +15,12 @@
       height: 100%;
       font-size: 16px;
     }
+    @media (max-width: 640px) {
+      html {
+        font-size: 14px;
+      }
+    }
+
 
     .chat-container {
       display: flex;
@@ -47,8 +53,8 @@
       border-radius: 0.5rem;
 
       /* mobile fixes */
-      word-wrap: break-word;
-      overflow-wrap: anywhere;
+      word-break: normal;
+      overflow-wrap: break-word;
       white-space: normal;  
     }
     @media (max-width: 640px) {
