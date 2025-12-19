@@ -6,7 +6,7 @@ from django.http import JsonResponse
 from .models import Chat
 
 def index(request):
-  return render(request, 'chat/index.html')
+  return render(request, 'chat/indexv2.html')
 
 load_dotenv()
 api_key = os.getenv('key')
