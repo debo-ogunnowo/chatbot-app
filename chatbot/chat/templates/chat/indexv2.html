@@ -117,21 +117,17 @@
 
 
   <script>
-    // Initialize marked with options
     marked.setOptions({
-        breaks: true, // Add line breaks on single line breaks
-        gfm: true,    // Enable GitHub Flavored Markdown (tables, etc.)
+        breaks: true, 
+        gfm: true,    
     });
 
     const chatForm = document.getElementById('chat-form');
     const chatInput = document.getElementById('chat-input');
     const chatHistory = document.getElementById('chat-history');
 
-    // Function to safely render markdown
     function renderMarkdown(text) {
-        // Parse markdown to HTML
         const rawHtml = marked.parse(text);
-        // Sanitize HTML for security
         const cleanHtml = DOMPurify.sanitize(rawHtml);
         return cleanHtml;
     }
